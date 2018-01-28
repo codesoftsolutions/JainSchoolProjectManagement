@@ -835,33 +835,33 @@
             this.otherFundsToolStripMenuItem,
             this.otherFundsToolStripMenuItem1});
             this.creatFundsToolStripMenuItem.Name = "creatFundsToolStripMenuItem";
-            this.creatFundsToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
+            this.creatFundsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.creatFundsToolStripMenuItem.Text = "Create Funds";
             // 
             // monthlyFundToolStripMenuItem
             // 
             this.monthlyFundToolStripMenuItem.Name = "monthlyFundToolStripMenuItem";
-            this.monthlyFundToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.monthlyFundToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.monthlyFundToolStripMenuItem.Text = "Monthly Fund";
             this.monthlyFundToolStripMenuItem.Click += new System.EventHandler(this.monthlyFundToolStripMenuItem_Click);
             // 
             // otherFundsToolStripMenuItem
             // 
             this.otherFundsToolStripMenuItem.Name = "otherFundsToolStripMenuItem";
-            this.otherFundsToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.otherFundsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.otherFundsToolStripMenuItem.Text = "Yearly Funds";
             this.otherFundsToolStripMenuItem.Click += new System.EventHandler(this.otherFundsToolStripMenuItem_Click);
             // 
             // otherFundsToolStripMenuItem1
             // 
             this.otherFundsToolStripMenuItem1.Name = "otherFundsToolStripMenuItem1";
-            this.otherFundsToolStripMenuItem1.Size = new System.Drawing.Size(174, 26);
+            this.otherFundsToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
             this.otherFundsToolStripMenuItem1.Text = "Other Funds";
             // 
             // schoolFundsToolStripMenuItem
             // 
             this.schoolFundsToolStripMenuItem.Name = "schoolFundsToolStripMenuItem";
-            this.schoolFundsToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
+            this.schoolFundsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.schoolFundsToolStripMenuItem.Text = "School Funds";
             // 
             // accountsToolStripMenuItem
@@ -954,20 +954,20 @@
             this.dailyToolStripMenuItem,
             this.bankChargesToolStripMenuItem});
             this.expensisToolStripMenuItem.Name = "expensisToolStripMenuItem";
-            this.expensisToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
-            this.expensisToolStripMenuItem.Text = "Expensis";
+            this.expensisToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.expensisToolStripMenuItem.Text = "Expenses";
             this.expensisToolStripMenuItem.Click += new System.EventHandler(this.expensisToolStripMenuItem_Click);
             // 
             // dailyToolStripMenuItem
             // 
             this.dailyToolStripMenuItem.Name = "dailyToolStripMenuItem";
-            this.dailyToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.dailyToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.dailyToolStripMenuItem.Text = "Daily Slip";
             // 
             // bankChargesToolStripMenuItem
             // 
             this.bankChargesToolStripMenuItem.Name = "bankChargesToolStripMenuItem";
-            this.bankChargesToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.bankChargesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.bankChargesToolStripMenuItem.Text = "Bank Charges";
             // 
             // collectionToolStripMenuItem
