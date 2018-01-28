@@ -146,7 +146,6 @@
             this.bankCollectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.schoolCollectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.abdbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -610,8 +609,7 @@
             this.searchIDToolStripMenuItem2,
             this.salaryViewerToolStripMenuItem,
             this.schduleMakerToolStripMenuItem,
-            this.otherOptionToolStripMenuItem1,
-            this.abdbToolStripMenuItem});
+            this.otherOptionToolStripMenuItem1});
             this.employsToolStripMenuItem.Name = "employsToolStripMenuItem";
             this.employsToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.employsToolStripMenuItem.Text = "Employee";
@@ -629,13 +627,13 @@
             // fullDetailToolStripMenuItem2
             // 
             this.fullDetailToolStripMenuItem2.Name = "fullDetailToolStripMenuItem2";
-            this.fullDetailToolStripMenuItem2.Size = new System.Drawing.Size(159, 26);
+            this.fullDetailToolStripMenuItem2.Size = new System.Drawing.Size(181, 26);
             this.fullDetailToolStripMenuItem2.Text = "Full Detail";
             // 
             // documentsToolStripMenuItem
             // 
             this.documentsToolStripMenuItem.Name = "documentsToolStripMenuItem";
-            this.documentsToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.documentsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.documentsToolStripMenuItem.Text = "Documents";
             // 
             // searchIDToolStripMenuItem2
@@ -1027,12 +1025,6 @@
             this.shToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.shToolStripMenuItem.Text = "Accounts";
             // 
-            // abdbToolStripMenuItem
-            // 
-            this.abdbToolStripMenuItem.Name = "abdbToolStripMenuItem";
-            this.abdbToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.abdbToolStripMenuItem.Text = "abdb";
-            // 
             // mainpanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1173,6 +1165,5 @@
         private System.Windows.Forms.ToolStripMenuItem setHomeWorkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setMessageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem schoolCollectionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem abdbToolStripMenuItem;
     }
 }
