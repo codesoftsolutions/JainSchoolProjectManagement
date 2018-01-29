@@ -142,6 +142,15 @@
             this.bankCollectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.schoolCollectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.issueDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bookIssueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.avalabilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.putRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.requestsStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grantRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pendingRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkStatusToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -212,7 +221,8 @@
             this.searchIDToolStripMenuItem,
             this.checkFeeToolStripMenuItem,
             this.balanceToolStripMenuItem,
-            this.reportToolStripMenuItem});
+            this.reportToolStripMenuItem,
+            this.bookIssueToolStripMenuItem});
             this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
             this.studentToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.studentToolStripMenuItem.Text = "Student";
@@ -390,7 +400,7 @@
             // printFormToolStripMenuItem1
             // 
             this.printFormToolStripMenuItem1.Name = "printFormToolStripMenuItem1";
-            this.printFormToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
+            this.printFormToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
             this.printFormToolStripMenuItem1.Text = "Print Form";
             // 
             // teacherFullInfoToolStripMenuItem
@@ -427,19 +437,19 @@
             // byNameToolStripMenuItem
             // 
             this.byNameToolStripMenuItem.Name = "byNameToolStripMenuItem";
-            this.byNameToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.byNameToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.byNameToolStripMenuItem.Text = "By Name";
             // 
             // byMobileNoToolStripMenuItem
             // 
             this.byMobileNoToolStripMenuItem.Name = "byMobileNoToolStripMenuItem";
-            this.byMobileNoToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.byMobileNoToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.byMobileNoToolStripMenuItem.Text = "By Mobile No.";
             // 
             // byAdharCardToolStripMenuItem
             // 
             this.byAdharCardToolStripMenuItem.Name = "byAdharCardToolStripMenuItem";
-            this.byAdharCardToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.byAdharCardToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.byAdharCardToolStripMenuItem.Text = "By Adhar No.";
             // 
             // setSchduleToolStripMenuItem
@@ -526,19 +536,19 @@
             // checkWorkToolStripMenuItem
             // 
             this.checkWorkToolStripMenuItem.Name = "checkWorkToolStripMenuItem";
-            this.checkWorkToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.checkWorkToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
             this.checkWorkToolStripMenuItem.Text = "Check Work";
             // 
             // updateWorkToolStripMenuItem
             // 
             this.updateWorkToolStripMenuItem.Name = "updateWorkToolStripMenuItem";
-            this.updateWorkToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.updateWorkToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
             this.updateWorkToolStripMenuItem.Text = "Update Work";
             // 
             // checkStatusToolStripMenuItem
             // 
             this.checkStatusToolStripMenuItem.Name = "checkStatusToolStripMenuItem";
-            this.checkStatusToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.checkStatusToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
             this.checkStatusToolStripMenuItem.Text = "Check Status";
             // 
             // otherOptionToolStripMenuItem
@@ -594,13 +604,13 @@
             // fullDetailToolStripMenuItem2
             // 
             this.fullDetailToolStripMenuItem2.Name = "fullDetailToolStripMenuItem2";
-            this.fullDetailToolStripMenuItem2.Size = new System.Drawing.Size(181, 26);
+            this.fullDetailToolStripMenuItem2.Size = new System.Drawing.Size(159, 26);
             this.fullDetailToolStripMenuItem2.Text = "Full Detail";
             // 
             // documentsToolStripMenuItem
             // 
             this.documentsToolStripMenuItem.Name = "documentsToolStripMenuItem";
-            this.documentsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.documentsToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.documentsToolStripMenuItem.Text = "Documents";
             // 
             // searchIDToolStripMenuItem2
@@ -751,7 +761,9 @@
             this.addBookToolStripMenuItem,
             this.addDepartmentToolStripMenuItem,
             this.giveBookToolStripMenuItem,
-            this.fullDetailToolStripMenuItem});
+            this.fullDetailToolStripMenuItem,
+            this.issueDetailToolStripMenuItem,
+            this.requestsStatusToolStripMenuItem});
             this.libraryToolStripMenuItem.Name = "libraryToolStripMenuItem";
             this.libraryToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
             this.libraryToolStripMenuItem.Text = "Library";
@@ -842,21 +854,21 @@
             // addShopToolStripMenuItem
             // 
             this.addShopToolStripMenuItem.Name = "addShopToolStripMenuItem";
-            this.addShopToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.addShopToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.addShopToolStripMenuItem.Text = "Add Shop";
             this.addShopToolStripMenuItem.Click += new System.EventHandler(this.addShopToolStripMenuItem_Click);
             // 
             // addRentToolStripMenuItem
             // 
             this.addRentToolStripMenuItem.Name = "addRentToolStripMenuItem";
-            this.addRentToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.addRentToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.addRentToolStripMenuItem.Text = "Add Rent";
             this.addRentToolStripMenuItem.Click += new System.EventHandler(this.addRentToolStripMenuItem_Click);
             // 
             // checkFullToolStripMenuItem
             // 
             this.checkFullToolStripMenuItem.Name = "checkFullToolStripMenuItem";
-            this.checkFullToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.checkFullToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.checkFullToolStripMenuItem.Text = "Shop Detail";
             this.checkFullToolStripMenuItem.Click += new System.EventHandler(this.checkFullToolStripMenuItem_Click);
             // 
@@ -904,13 +916,13 @@
             // shopFareToolStripMenuItem
             // 
             this.shopFareToolStripMenuItem.Name = "shopFareToolStripMenuItem";
-            this.shopFareToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
+            this.shopFareToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.shopFareToolStripMenuItem.Text = "Shop Fare";
             // 
             // bankToolStripMenuItem1
             // 
             this.bankToolStripMenuItem1.Name = "bankToolStripMenuItem1";
-            this.bankToolStripMenuItem1.Size = new System.Drawing.Size(149, 26);
+            this.bankToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
             this.bankToolStripMenuItem1.Text = "Bank";
             // 
             // expensisToolStripMenuItem
@@ -992,16 +1004,79 @@
             this.shToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.shToolStripMenuItem.Text = "Accounts";
             // 
+            // issueDetailToolStripMenuItem
+            // 
+            this.issueDetailToolStripMenuItem.Name = "issueDetailToolStripMenuItem";
+            this.issueDetailToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.issueDetailToolStripMenuItem.Text = "Issue Detail";
+            // 
+            // bookIssueToolStripMenuItem
+            // 
+            this.bookIssueToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.avalabilityToolStripMenuItem,
+            this.putRequestToolStripMenuItem,
+            this.checkStatusToolStripMenuItem1});
+            this.bookIssueToolStripMenuItem.Name = "bookIssueToolStripMenuItem";
+            this.bookIssueToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.bookIssueToolStripMenuItem.Text = "Books Detail";
+            // 
+            // avalabilityToolStripMenuItem
+            // 
+            this.avalabilityToolStripMenuItem.Name = "avalabilityToolStripMenuItem";
+            this.avalabilityToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this.avalabilityToolStripMenuItem.Text = "Check Avalability";
+            // 
+            // putRequestToolStripMenuItem
+            // 
+            this.putRequestToolStripMenuItem.Name = "putRequestToolStripMenuItem";
+            this.putRequestToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this.putRequestToolStripMenuItem.Text = "Put Request";
+            // 
+            // requestsStatusToolStripMenuItem
+            // 
+            this.requestsStatusToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkRequestToolStripMenuItem,
+            this.grantRequestToolStripMenuItem,
+            this.pendingRequestToolStripMenuItem});
+            this.requestsStatusToolStripMenuItem.Name = "requestsStatusToolStripMenuItem";
+            this.requestsStatusToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.requestsStatusToolStripMenuItem.Text = "Requests Status";
+            // 
+            // checkRequestToolStripMenuItem
+            // 
+            this.checkRequestToolStripMenuItem.Name = "checkRequestToolStripMenuItem";
+            this.checkRequestToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.checkRequestToolStripMenuItem.Text = "Check Request";
+            // 
+            // grantRequestToolStripMenuItem
+            // 
+            this.grantRequestToolStripMenuItem.Name = "grantRequestToolStripMenuItem";
+            this.grantRequestToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.grantRequestToolStripMenuItem.Text = "Grant Request";
+            // 
+            // pendingRequestToolStripMenuItem
+            // 
+            this.pendingRequestToolStripMenuItem.Name = "pendingRequestToolStripMenuItem";
+            this.pendingRequestToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.pendingRequestToolStripMenuItem.Text = "Pending Request";
+            // 
+            // checkStatusToolStripMenuItem1
+            // 
+            this.checkStatusToolStripMenuItem1.Name = "checkStatusToolStripMenuItem1";
+            this.checkStatusToolStripMenuItem1.Size = new System.Drawing.Size(197, 26);
+            this.checkStatusToolStripMenuItem1.Text = "Check Status";
+            // 
             // mainpanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1227, 674);
+            this.ClientSize = new System.Drawing.Size(1227, 716);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Name = "mainpanel";
             this.Text = "abc system";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1128,5 +1203,14 @@
         private System.Windows.Forms.ToolStripMenuItem setHomeWorkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setMessageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem schoolCollectionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bookIssueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem avalabilityToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem putRequestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkStatusToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem issueDetailToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem requestsStatusToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkRequestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grantRequestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pendingRequestToolStripMenuItem;
     }
 }
