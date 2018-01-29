@@ -74,10 +74,6 @@
             this.showIncrementToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.showBonusToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.deductionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setTimeTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.basisSalaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showIncrementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showBonusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setSchduleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.setToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.otherDutiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -376,7 +372,6 @@
             this.teacherFullInfoToolStripMenuItem,
             this.searchIDToolStripMenuItem1,
             this.setSchduleToolStripMenuItem,
-            this.setTimeTableToolStripMenuItem,
             this.setSchduleToolStripMenuItem1,
             this.setDailyWorkToolStripMenuItem,
             this.otherOptionToolStripMenuItem});
@@ -395,7 +390,7 @@
             // printFormToolStripMenuItem1
             // 
             this.printFormToolStripMenuItem1.Name = "printFormToolStripMenuItem1";
-            this.printFormToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.printFormToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
             this.printFormToolStripMenuItem1.Text = "Print Form";
             // 
             // teacherFullInfoToolStripMenuItem
@@ -432,19 +427,19 @@
             // byNameToolStripMenuItem
             // 
             this.byNameToolStripMenuItem.Name = "byNameToolStripMenuItem";
-            this.byNameToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
+            this.byNameToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.byNameToolStripMenuItem.Text = "By Name";
             // 
             // byMobileNoToolStripMenuItem
             // 
             this.byMobileNoToolStripMenuItem.Name = "byMobileNoToolStripMenuItem";
-            this.byMobileNoToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
+            this.byMobileNoToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.byMobileNoToolStripMenuItem.Text = "By Mobile No.";
             // 
             // byAdharCardToolStripMenuItem
             // 
             this.byAdharCardToolStripMenuItem.Name = "byAdharCardToolStripMenuItem";
-            this.byAdharCardToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
+            this.byAdharCardToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.byAdharCardToolStripMenuItem.Text = "By Adhar No.";
             // 
             // setSchduleToolStripMenuItem
@@ -496,34 +491,6 @@
             this.deductionsToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
             this.deductionsToolStripMenuItem.Text = "Deductions";
             // 
-            // setTimeTableToolStripMenuItem
-            // 
-            this.setTimeTableToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.basisSalaryToolStripMenuItem,
-            this.showIncrementToolStripMenuItem,
-            this.showBonusToolStripMenuItem});
-            this.setTimeTableToolStripMenuItem.Name = "setTimeTableToolStripMenuItem";
-            this.setTimeTableToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
-            this.setTimeTableToolStripMenuItem.Text = "Salary Viewer";
-            // 
-            // basisSalaryToolStripMenuItem
-            // 
-            this.basisSalaryToolStripMenuItem.Name = "basisSalaryToolStripMenuItem";
-            this.basisSalaryToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
-            this.basisSalaryToolStripMenuItem.Text = "Basis Salary";
-            // 
-            // showIncrementToolStripMenuItem
-            // 
-            this.showIncrementToolStripMenuItem.Name = "showIncrementToolStripMenuItem";
-            this.showIncrementToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
-            this.showIncrementToolStripMenuItem.Text = "Show Increment";
-            // 
-            // showBonusToolStripMenuItem
-            // 
-            this.showBonusToolStripMenuItem.Name = "showBonusToolStripMenuItem";
-            this.showBonusToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
-            this.showBonusToolStripMenuItem.Text = "Show Bonus";
-            // 
             // setSchduleToolStripMenuItem1
             // 
             this.setSchduleToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -559,19 +526,19 @@
             // checkWorkToolStripMenuItem
             // 
             this.checkWorkToolStripMenuItem.Name = "checkWorkToolStripMenuItem";
-            this.checkWorkToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
+            this.checkWorkToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.checkWorkToolStripMenuItem.Text = "Check Work";
             // 
             // updateWorkToolStripMenuItem
             // 
             this.updateWorkToolStripMenuItem.Name = "updateWorkToolStripMenuItem";
-            this.updateWorkToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
+            this.updateWorkToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.updateWorkToolStripMenuItem.Text = "Update Work";
             // 
             // checkStatusToolStripMenuItem
             // 
             this.checkStatusToolStripMenuItem.Name = "checkStatusToolStripMenuItem";
-            this.checkStatusToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
+            this.checkStatusToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.checkStatusToolStripMenuItem.Text = "Check Status";
             // 
             // otherOptionToolStripMenuItem
@@ -1107,10 +1074,6 @@
         private System.Windows.Forms.ToolStripMenuItem teacherFullInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem uploadDocumentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem setTimeTableToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem basisSalaryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem showIncrementToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem showBonusToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setSchduleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setTimeTableToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem otherDutiesToolStripMenuItem;
