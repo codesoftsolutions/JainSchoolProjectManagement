@@ -176,5 +176,10 @@ namespace schoolmanagementdcmjain
         {
 
         }
+
+        private void enterDetailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -57,6 +57,10 @@
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setHomeWorkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setMessageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bookIssueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.avalabilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.putRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkStatusToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.teacherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entryFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printFormToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -114,6 +118,11 @@
             this.addDepartmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giveBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fullDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.issueDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.requestsStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grantRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pendingRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fundsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creatFundsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monthlyFundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -142,15 +151,7 @@
             this.bankCollectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.schoolCollectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.issueDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bookIssueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.avalabilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.putRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.requestsStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grantRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pendingRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkStatusToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.masterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -205,7 +206,8 @@
             this.depositeToolStripMenuItem,
             this.expensisToolStripMenuItem,
             this.collectionToolStripMenuItem,
-            this.shToolStripMenuItem});
+            this.shToolStripMenuItem,
+            this.masterToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1227, 28);
@@ -374,6 +376,34 @@
             this.setMessageToolStripMenuItem.Name = "setMessageToolStripMenuItem";
             this.setMessageToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
             this.setMessageToolStripMenuItem.Text = "Set Message";
+            // 
+            // bookIssueToolStripMenuItem
+            // 
+            this.bookIssueToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.avalabilityToolStripMenuItem,
+            this.putRequestToolStripMenuItem,
+            this.checkStatusToolStripMenuItem1});
+            this.bookIssueToolStripMenuItem.Name = "bookIssueToolStripMenuItem";
+            this.bookIssueToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.bookIssueToolStripMenuItem.Text = "Books Detail";
+            // 
+            // avalabilityToolStripMenuItem
+            // 
+            this.avalabilityToolStripMenuItem.Name = "avalabilityToolStripMenuItem";
+            this.avalabilityToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this.avalabilityToolStripMenuItem.Text = "Check Avalability";
+            // 
+            // putRequestToolStripMenuItem
+            // 
+            this.putRequestToolStripMenuItem.Name = "putRequestToolStripMenuItem";
+            this.putRequestToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this.putRequestToolStripMenuItem.Text = "Put Request";
+            // 
+            // checkStatusToolStripMenuItem1
+            // 
+            this.checkStatusToolStripMenuItem1.Name = "checkStatusToolStripMenuItem1";
+            this.checkStatusToolStripMenuItem1.Size = new System.Drawing.Size(197, 26);
+            this.checkStatusToolStripMenuItem1.Text = "Check Status";
             // 
             // teacherToolStripMenuItem
             // 
@@ -600,17 +630,18 @@
             this.enterDetailToolStripMenuItem.Name = "enterDetailToolStripMenuItem";
             this.enterDetailToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.enterDetailToolStripMenuItem.Text = "Register";
+            this.enterDetailToolStripMenuItem.Click += new System.EventHandler(this.enterDetailToolStripMenuItem_Click);
             // 
             // fullDetailToolStripMenuItem2
             // 
             this.fullDetailToolStripMenuItem2.Name = "fullDetailToolStripMenuItem2";
-            this.fullDetailToolStripMenuItem2.Size = new System.Drawing.Size(159, 26);
+            this.fullDetailToolStripMenuItem2.Size = new System.Drawing.Size(181, 26);
             this.fullDetailToolStripMenuItem2.Text = "Full Detail";
             // 
             // documentsToolStripMenuItem
             // 
             this.documentsToolStripMenuItem.Name = "documentsToolStripMenuItem";
-            this.documentsToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.documentsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.documentsToolStripMenuItem.Text = "Documents";
             // 
             // searchIDToolStripMenuItem2
@@ -796,6 +827,40 @@
             this.fullDetailToolStripMenuItem.Text = "Full Detail";
             this.fullDetailToolStripMenuItem.Click += new System.EventHandler(this.fullDetailToolStripMenuItem_Click);
             // 
+            // issueDetailToolStripMenuItem
+            // 
+            this.issueDetailToolStripMenuItem.Name = "issueDetailToolStripMenuItem";
+            this.issueDetailToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.issueDetailToolStripMenuItem.Text = "Issue Detail";
+            // 
+            // requestsStatusToolStripMenuItem
+            // 
+            this.requestsStatusToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkRequestToolStripMenuItem,
+            this.grantRequestToolStripMenuItem,
+            this.pendingRequestToolStripMenuItem});
+            this.requestsStatusToolStripMenuItem.Name = "requestsStatusToolStripMenuItem";
+            this.requestsStatusToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.requestsStatusToolStripMenuItem.Text = "Requests Status";
+            // 
+            // checkRequestToolStripMenuItem
+            // 
+            this.checkRequestToolStripMenuItem.Name = "checkRequestToolStripMenuItem";
+            this.checkRequestToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.checkRequestToolStripMenuItem.Text = "Check Request";
+            // 
+            // grantRequestToolStripMenuItem
+            // 
+            this.grantRequestToolStripMenuItem.Name = "grantRequestToolStripMenuItem";
+            this.grantRequestToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.grantRequestToolStripMenuItem.Text = "Grant Request";
+            // 
+            // pendingRequestToolStripMenuItem
+            // 
+            this.pendingRequestToolStripMenuItem.Name = "pendingRequestToolStripMenuItem";
+            this.pendingRequestToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.pendingRequestToolStripMenuItem.Text = "Pending Request";
+            // 
             // fundsToolStripMenuItem
             // 
             this.fundsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -812,33 +877,33 @@
             this.otherFundsToolStripMenuItem,
             this.otherFundsToolStripMenuItem1});
             this.creatFundsToolStripMenuItem.Name = "creatFundsToolStripMenuItem";
-            this.creatFundsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.creatFundsToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
             this.creatFundsToolStripMenuItem.Text = "Create Funds";
             // 
             // monthlyFundToolStripMenuItem
             // 
             this.monthlyFundToolStripMenuItem.Name = "monthlyFundToolStripMenuItem";
-            this.monthlyFundToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.monthlyFundToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.monthlyFundToolStripMenuItem.Text = "Monthly Fund";
             this.monthlyFundToolStripMenuItem.Click += new System.EventHandler(this.monthlyFundToolStripMenuItem_Click);
             // 
             // otherFundsToolStripMenuItem
             // 
             this.otherFundsToolStripMenuItem.Name = "otherFundsToolStripMenuItem";
-            this.otherFundsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.otherFundsToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.otherFundsToolStripMenuItem.Text = "Yearly Funds";
             this.otherFundsToolStripMenuItem.Click += new System.EventHandler(this.otherFundsToolStripMenuItem_Click);
             // 
             // otherFundsToolStripMenuItem1
             // 
             this.otherFundsToolStripMenuItem1.Name = "otherFundsToolStripMenuItem1";
-            this.otherFundsToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
+            this.otherFundsToolStripMenuItem1.Size = new System.Drawing.Size(174, 26);
             this.otherFundsToolStripMenuItem1.Text = "Other Funds";
             // 
             // schoolFundsToolStripMenuItem
             // 
             this.schoolFundsToolStripMenuItem.Name = "schoolFundsToolStripMenuItem";
-            this.schoolFundsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.schoolFundsToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
             this.schoolFundsToolStripMenuItem.Text = "School Funds";
             // 
             // accountsToolStripMenuItem
@@ -854,21 +919,21 @@
             // addShopToolStripMenuItem
             // 
             this.addShopToolStripMenuItem.Name = "addShopToolStripMenuItem";
-            this.addShopToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.addShopToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.addShopToolStripMenuItem.Text = "Add Shop";
             this.addShopToolStripMenuItem.Click += new System.EventHandler(this.addShopToolStripMenuItem_Click);
             // 
             // addRentToolStripMenuItem
             // 
             this.addRentToolStripMenuItem.Name = "addRentToolStripMenuItem";
-            this.addRentToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.addRentToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.addRentToolStripMenuItem.Text = "Add Rent";
             this.addRentToolStripMenuItem.Click += new System.EventHandler(this.addRentToolStripMenuItem_Click);
             // 
             // checkFullToolStripMenuItem
             // 
             this.checkFullToolStripMenuItem.Name = "checkFullToolStripMenuItem";
-            this.checkFullToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.checkFullToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.checkFullToolStripMenuItem.Text = "Shop Detail";
             this.checkFullToolStripMenuItem.Click += new System.EventHandler(this.checkFullToolStripMenuItem_Click);
             // 
@@ -1004,67 +1069,11 @@
             this.shToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.shToolStripMenuItem.Text = "Accounts";
             // 
-            // issueDetailToolStripMenuItem
+            // masterToolStripMenuItem
             // 
-            this.issueDetailToolStripMenuItem.Name = "issueDetailToolStripMenuItem";
-            this.issueDetailToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
-            this.issueDetailToolStripMenuItem.Text = "Issue Detail";
-            // 
-            // bookIssueToolStripMenuItem
-            // 
-            this.bookIssueToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.avalabilityToolStripMenuItem,
-            this.putRequestToolStripMenuItem,
-            this.checkStatusToolStripMenuItem1});
-            this.bookIssueToolStripMenuItem.Name = "bookIssueToolStripMenuItem";
-            this.bookIssueToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
-            this.bookIssueToolStripMenuItem.Text = "Books Detail";
-            // 
-            // avalabilityToolStripMenuItem
-            // 
-            this.avalabilityToolStripMenuItem.Name = "avalabilityToolStripMenuItem";
-            this.avalabilityToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
-            this.avalabilityToolStripMenuItem.Text = "Check Avalability";
-            // 
-            // putRequestToolStripMenuItem
-            // 
-            this.putRequestToolStripMenuItem.Name = "putRequestToolStripMenuItem";
-            this.putRequestToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
-            this.putRequestToolStripMenuItem.Text = "Put Request";
-            // 
-            // requestsStatusToolStripMenuItem
-            // 
-            this.requestsStatusToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.checkRequestToolStripMenuItem,
-            this.grantRequestToolStripMenuItem,
-            this.pendingRequestToolStripMenuItem});
-            this.requestsStatusToolStripMenuItem.Name = "requestsStatusToolStripMenuItem";
-            this.requestsStatusToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
-            this.requestsStatusToolStripMenuItem.Text = "Requests Status";
-            // 
-            // checkRequestToolStripMenuItem
-            // 
-            this.checkRequestToolStripMenuItem.Name = "checkRequestToolStripMenuItem";
-            this.checkRequestToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
-            this.checkRequestToolStripMenuItem.Text = "Check Request";
-            // 
-            // grantRequestToolStripMenuItem
-            // 
-            this.grantRequestToolStripMenuItem.Name = "grantRequestToolStripMenuItem";
-            this.grantRequestToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
-            this.grantRequestToolStripMenuItem.Text = "Grant Request";
-            // 
-            // pendingRequestToolStripMenuItem
-            // 
-            this.pendingRequestToolStripMenuItem.Name = "pendingRequestToolStripMenuItem";
-            this.pendingRequestToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
-            this.pendingRequestToolStripMenuItem.Text = "Pending Request";
-            // 
-            // checkStatusToolStripMenuItem1
-            // 
-            this.checkStatusToolStripMenuItem1.Name = "checkStatusToolStripMenuItem1";
-            this.checkStatusToolStripMenuItem1.Size = new System.Drawing.Size(197, 26);
-            this.checkStatusToolStripMenuItem1.Text = "Check Status";
+            this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
+            this.masterToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
+            this.masterToolStripMenuItem.Text = "Master";
             // 
             // mainpanel
             // 
@@ -1212,5 +1221,6 @@
         private System.Windows.Forms.ToolStripMenuItem checkRequestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grantRequestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pendingRequestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem masterToolStripMenuItem;
     }
 }
