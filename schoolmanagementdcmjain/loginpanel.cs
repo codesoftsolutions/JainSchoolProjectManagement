@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace schoolmanagementdcmjain
 {
@@ -24,8 +25,26 @@ namespace schoolmanagementdcmjain
 
         private void button1_Click(object sender, EventArgs e)
         {
-            mainpanel mp = new mainpanel();
-            mp.Show();
+
+            if (String.IsNullOrEmpty(userName.Text) || String.IsNullOrEmpty(password.Text))
+            {
+                MessageBox.Show(Utility.Constants.ConstantStrings.user_pwd_not_empty, Utility.Constants.ConstantStrings.confirmation, MessageBoxButtons.OK);
+            }
+            else
+            {
+                string userNameGet = userName.Text;
+                string paswordGet = password.Text;
+                Database.Connection connection = new Database.Connection();
+                MySqlConnection mySqlConnection = connection.getConnection();
+                if (mySqlConnection != null)
+                {
+                    MessageBox.Show(Utility.Constants.ConstantStrings.confirmation, Utility.Constants.ConstantStrings.confirmation, MessageBoxButtons.OK);
+                }
+                mainpanel mp = new mainpanel();
+                mp.Show();
+            }
+
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

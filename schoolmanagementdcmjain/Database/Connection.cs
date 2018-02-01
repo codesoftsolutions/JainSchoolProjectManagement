@@ -9,7 +9,22 @@ namespace schoolmanagementdcmjain.Database
 {
     class Connection
     {
-        Utility.Constants.DatabaseConnection GetConstants = new Utility.Constants.DatabaseConnection();
+        MySqlConnection mySqlConnection = null;
+        public MySqlConnection makeConnection()
+        {
+            MySqlConnection mySqlConnection = new MySqlConnection(Utility.Constants.DatabaseConnection.connectionString);
+            return mySqlConnection;
+        }
+
+        public MySqlConnection getConnection()
+        {
+            if (mySqlConnection == null)
+            {
+                MySqlConnection mySqlConnection = makeConnection();
+                mySqlConnection.Open();
+            }
+            return mySqlConnection;
+        }
 
     }
 }

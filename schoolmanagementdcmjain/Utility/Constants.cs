@@ -8,14 +8,15 @@ namespace schoolmanagementdcmjain.Utility
 {
     public class Constants
     {
-        public  class DatabaseConnection
+        public class DatabaseConnection
         {
-            public static string connectionString = "Server=localhost;Database=school;Uid=root;Pwd=root";
+            public static string connectionString = "Server=localhost;Database=jainschool;Uid=root;Pwd=root";
+        }
 
-            public static string getConnectionString()
-            {
-                return connectionString;
-            }
+        public class ConstantStrings
+        {
+            public static string user_pwd_not_empty = "Username and Password Can't be empty";
+            public static string confirmation = "Confirmation";
         }
     }
 }
