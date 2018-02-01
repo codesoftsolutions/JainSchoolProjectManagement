@@ -51,6 +51,7 @@
     <Compile Include="Banks\accountdetail.Designer.cs">
       <DependentUpon>accountdetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Database\Connection.cs" />
     <Compile Include="Library\addbook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +132,7 @@
     <Compile Include="Funds\yearlyfunds.Designer.cs">
       <DependentUpon>yearlyfunds.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utility\Constants.cs" />
     <EmbeddedResource Include="Banks\accountdetail.resx">
       <DependentUpon>accountdetail.cs</DependentUpon>
     </EmbeddedResource>
