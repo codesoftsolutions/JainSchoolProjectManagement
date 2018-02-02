@@ -10,7 +10,11 @@ namespace schoolmanagementdcmjain.Utility
     {
         public class DatabaseConnection
         {
-            public static string connectionString = "Server=localhost;Database=jainschool;Uid=root;Pwd=root";
+            private static string server="localhost";
+            private static string database = "jainschool";
+            private static string userId = "root";
+            private static string password = "root";
+            public static string connectionString = "Server="+ server + ";"+"Database="+database+";"+"Uid="+userId+";"+"Pwd="+password+"";
         }
 
         public class ConstantStrings

@@ -18,12 +18,56 @@ namespace schoolmanagementdcmjain.Database
 
         public MySqlConnection getConnection()
         {
-            MySqlConnection mySqlConnection = makeConnection();
             if (mySqlConnection == null)
             {
-               mySqlConnection.Open();
+                mySqlConnection = makeConnection();
+                mySqlConnection.Open();
+            }
+            else
+            {
+                if(mySqlConnection.State==System.Data.ConnectionState.Closed)
+                {
+                    mySqlConnection.Open();
+                }
             }
             return mySqlConnection;
+        }
+
+        public Boolean insertData(string qry)
+        {
+            getConnection();
+            MySqlCommand cmd = new MySqlCommand(qry, mySqlConnection);
+            cmd.ExecuteNonQuery();
+            return true;
+        }
+        public Boolean selectDataQuery(string qry)
+        {
+            getConnection();
+            MySqlCommand cmd = new MySqlCommand(qry, mySqlConnection);
+            cmd.ExecuteReader();
+            return true;
+        }
+
+        public Boolean updateData(string qry)
+        {
+            getConnection();
+            MySqlCommand cmd = new MySqlCommand(qry, mySqlConnection);
+            return true;
+        }
+
+        public Boolean deleteData(string qry)
+        {
+            getConnection();
+            MySqlCommand cmd = new MySqlCommand(qry, mySqlConnection);
+            return true;
+        }
+
+        public void closeConnection()
+        {
+            if (mySqlConnection!=null&&mySqlConnection.State == System.Data.ConnectionState.Open)
+            {
+                mySqlConnection.Open();
+            }
         }
 
     }
