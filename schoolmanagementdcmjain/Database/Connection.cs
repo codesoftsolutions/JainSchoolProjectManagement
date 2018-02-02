@@ -18,10 +18,10 @@ namespace schoolmanagementdcmjain.Database
 
         public MySqlConnection getConnection()
         {
+            MySqlConnection mySqlConnection = makeConnection();
             if (mySqlConnection == null)
             {
-                MySqlConnection mySqlConnection = makeConnection();
-                mySqlConnection.Open();
+               mySqlConnection.Open();
             }
             return mySqlConnection;
         }

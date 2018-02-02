@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using schoolmanagementdcmjain.Database;
 
 namespace schoolmanagementdcmjain
 {
@@ -34,7 +35,7 @@ namespace schoolmanagementdcmjain
             {
                 string userNameGet = userName.Text;
                 string paswordGet = password.Text;
-                Database.Connection connection = new Database.Connection();
+                Connection connection = new Connection();
                 MySqlConnection mySqlConnection = connection.getConnection();
                 if (mySqlConnection != null)
                 {

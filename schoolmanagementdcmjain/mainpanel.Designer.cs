@@ -150,7 +150,6 @@
             this.shopCollectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bankCollectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.schoolCollectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.shToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.masterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -206,7 +205,6 @@
             this.depositeToolStripMenuItem,
             this.expensisToolStripMenuItem,
             this.collectionToolStripMenuItem,
-            this.shToolStripMenuItem,
             this.masterToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -635,13 +633,13 @@
             // fullDetailToolStripMenuItem2
             // 
             this.fullDetailToolStripMenuItem2.Name = "fullDetailToolStripMenuItem2";
-            this.fullDetailToolStripMenuItem2.Size = new System.Drawing.Size(181, 26);
+            this.fullDetailToolStripMenuItem2.Size = new System.Drawing.Size(159, 26);
             this.fullDetailToolStripMenuItem2.Text = "Full Detail";
             // 
             // documentsToolStripMenuItem
             // 
             this.documentsToolStripMenuItem.Name = "documentsToolStripMenuItem";
-            this.documentsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.documentsToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.documentsToolStripMenuItem.Text = "Documents";
             // 
             // searchIDToolStripMenuItem2
@@ -1063,12 +1061,6 @@
             this.schoolCollectionToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.schoolCollectionToolStripMenuItem.Text = "School Collection";
             // 
-            // shToolStripMenuItem
-            // 
-            this.shToolStripMenuItem.Name = "shToolStripMenuItem";
-            this.shToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
-            this.shToolStripMenuItem.Text = "Accounts";
-            // 
             // masterToolStripMenuItem
             // 
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
@@ -1087,7 +1079,7 @@
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Name = "mainpanel";
-            this.Text = "abc system";
+            this.Text = " ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.mainpanel_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -1119,7 +1111,6 @@
         private System.Windows.Forms.ToolStripMenuItem libraryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fundsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accountsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem shToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem printFormToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkFeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem entryFormToolStripMenuItem;
