@@ -100,16 +100,16 @@
     <Compile Include="Funds\monthlyfunds.Designer.cs">
       <DependentUpon>monthlyfunds.cs</DependentUpon>
     </Compile>
-    <Compile Include="loginpanel.cs">
+    <Compile Include="Credentials\loginpanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="loginpanel.Designer.cs">
+    <Compile Include="Credentials\loginpanel.Designer.cs">
       <DependentUpon>loginpanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="mainpanel.cs">
+    <Compile Include="Master\mainpanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mainpanel.Designer.cs">
+    <Compile Include="Master\mainpanel.Designer.cs">
       <DependentUpon>mainpanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Banks\newbank.cs">
@@ -163,10 +163,10 @@
     <EmbeddedResource Include="Funds\monthlyfunds.resx">
       <DependentUpon>monthlyfunds.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="loginpanel.resx">
+    <EmbeddedResource Include="Credentials\loginpanel.resx">
       <DependentUpon>loginpanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mainpanel.resx">
+    <EmbeddedResource Include="Master\mainpanel.resx">
       <DependentUpon>mainpanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Banks\newbank.resx">
