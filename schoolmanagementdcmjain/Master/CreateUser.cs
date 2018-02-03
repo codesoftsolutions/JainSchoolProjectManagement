@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using schoolmanagementdcmjain.Master.Models;
 
 namespace schoolmanagementdcmjain.Master
 {
@@ -15,6 +16,16 @@ namespace schoolmanagementdcmjain.Master
         public CreateUser()
         {
             InitializeComponent();
+        }
+
+        private void createuserbutton_Click(object sender, EventArgs e)
+        {
+            CreateUserModel createUser = new CreateUserModel();
+            createUser._id = "";
+            createUser.userName = username.Text;
+            createUser.password = password.Text;
+            createUser.name = name.Text;
+            createUser.designation = designation.Text;
         }
     }
 }
