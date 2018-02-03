@@ -19,7 +19,7 @@ namespace schoolmanagementdcmjain.Utility
 
         public class ConstantStrings
         {
-            
+            public static string emptyString = "";
         }
 
         public enum UserTypes

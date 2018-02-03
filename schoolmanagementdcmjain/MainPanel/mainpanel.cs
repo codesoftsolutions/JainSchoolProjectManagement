@@ -168,11 +168,6 @@ namespace schoolmanagementdcmjain
 
         }
 
-        private void depositeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void expensisToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
