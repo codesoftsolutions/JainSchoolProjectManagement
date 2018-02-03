@@ -22,5 +22,15 @@ namespace schoolmanagementdcmjain.Utility
             public static string user_pwd_not_empty = "Username and Password Can't be empty";
             public static string confirmation = "Confirmation";
         }
+
+        public enum UserTypes
+        {
+            Accountant=0,Clerk=1,Teacher=2,Admin=3,Librarian=4,Laboratory=5
+        }
+
+        public enum UserTypeApproved
+        {
+            Yes=1,No=0
+        }
     }
 }

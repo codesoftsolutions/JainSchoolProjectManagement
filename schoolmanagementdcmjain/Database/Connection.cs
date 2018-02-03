@@ -61,6 +61,7 @@ namespace schoolmanagementdcmjain.Database
             return true;
         }
 
+
         public void closeConnection()
         {
             if (mySqlConnection!=null&&mySqlConnection.State == System.Data.ConnectionState.Open)

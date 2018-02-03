@@ -2,11 +2,13 @@
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using schoolmanagementdcmjain.Database;
+using System.Threading;
 
 namespace schoolmanagementdcmjain
 {
     public partial class loginpanel : Form
     {
+        Thread openMainPanelThread;
         public loginpanel()
         {
             InitializeComponent();
@@ -32,13 +34,21 @@ namespace schoolmanagementdcmjain
                 if (mySqlConnection != null)
                 {
                     MessageBox.Show(Utility.Constants.ConstantStrings.confirmation, Utility.Constants.ConstantStrings.confirmation, MessageBoxButtons.OK);
+                    openMainPanelThread = new Thread(openMainPanel);
+                    openMainPanelThread.SetApartmentState(ApartmentState.STA);
+                    openMainPanelThread.Start();
+                    this.Close();     
                 }
                 
-                mainpanel mp = new mainpanel();
-                mp.Show();
+               
             }
 
 
+        }
+
+        private void openMainPanel()
+        {
+            Application.Run(new mainpanel());
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

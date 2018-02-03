@@ -14,7 +14,7 @@ namespace schoolmanagementdcmjain.Master.Models
         public string name { get; set; }
         public int userRollType { get; set; }
         public string designation { get; set; }
-        public string isApproved { get; set; }
+        public int isApproved { get; set; }
 
 
     }

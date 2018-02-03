@@ -1,4 +1,5 @@
-﻿using System;
+﻿using schoolmanagementdcmjain.Master;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -184,7 +185,8 @@ namespace schoolmanagementdcmjain
 
         private void createUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            CreateUser createUser = new CreateUser();
+            createUser.Show();
         }
     }
 }

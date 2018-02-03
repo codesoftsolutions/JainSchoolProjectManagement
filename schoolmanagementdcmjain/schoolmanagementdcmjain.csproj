@@ -91,13 +91,15 @@
     <Compile Include="MainPanel\mainpanel.Designer.cs">
       <DependentUpon>mainpanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="MasterFolder\CreateUser.cs">
+    <Compile Include="Master\Constansts\Constants.cs" />
+    <Compile Include="Master\CreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MasterFolder\CreateUser.Designer.cs">
+    <Compile Include="Master\CreateUser.Designer.cs">
       <DependentUpon>CreateUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="MasterFolder\Models\CreateUserModel.cs" />
+    <Compile Include="Master\Database\User.cs" />
+    <Compile Include="Master\Models\CreateUserModel.cs" />
     <Compile Include="Shops\addrent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,7 +175,7 @@
     <EmbeddedResource Include="MainPanel\mainpanel.resx">
       <DependentUpon>mainpanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MasterFolder\CreateUser.resx">
+    <EmbeddedResource Include="Master\CreateUser.resx">
       <DependentUpon>CreateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Shops\addrent.resx">

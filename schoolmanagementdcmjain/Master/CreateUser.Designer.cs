@@ -39,8 +39,8 @@
             this.passwordGet = new System.Windows.Forms.TextBox();
             this.designation = new System.Windows.Forms.TextBox();
             this.usertype = new System.Windows.Forms.ComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.yesRadioButton = new System.Windows.Forms.RadioButton();
+            this.noRadioButton = new System.Windows.Forms.RadioButton();
             this.createuserbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -116,6 +116,7 @@
             // 
             this.passwordGet.Location = new System.Drawing.Point(233, 131);
             this.passwordGet.Name = "passwordGet";
+            this.passwordGet.PasswordChar = '*';
             this.passwordGet.Size = new System.Drawing.Size(100, 20);
             this.passwordGet.TabIndex = 8;
             // 
@@ -128,6 +129,7 @@
             // 
             // usertype
             // 
+            this.usertype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.usertype.FormattingEnabled = true;
             this.usertype.Items.AddRange(new object[] {
             "Accountant",
@@ -141,27 +143,28 @@
             this.usertype.Size = new System.Drawing.Size(100, 21);
             this.usertype.TabIndex = 10;
             // 
-            // radioButton1
+            // yesRadioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(233, 257);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(43, 17);
-            this.radioButton1.TabIndex = 11;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Yes";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.yesRadioButton.AutoSize = true;
+            this.yesRadioButton.Checked = true;
+            this.yesRadioButton.Location = new System.Drawing.Point(233, 257);
+            this.yesRadioButton.Name = "yesRadioButton";
+            this.yesRadioButton.Size = new System.Drawing.Size(43, 17);
+            this.yesRadioButton.TabIndex = 11;
+            this.yesRadioButton.TabStop = true;
+            this.yesRadioButton.Text = "Yes";
+            this.yesRadioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // noRadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(294, 257);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(39, 17);
-            this.radioButton2.TabIndex = 12;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "No";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.noRadioButton.AutoSize = true;
+            this.noRadioButton.Location = new System.Drawing.Point(294, 257);
+            this.noRadioButton.Name = "noRadioButton";
+            this.noRadioButton.Size = new System.Drawing.Size(39, 17);
+            this.noRadioButton.TabIndex = 12;
+            this.noRadioButton.TabStop = true;
+            this.noRadioButton.Text = "No";
+            this.noRadioButton.UseVisualStyleBackColor = true;
             // 
             // createuserbutton
             // 
@@ -179,8 +182,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 447);
             this.Controls.Add(this.createuserbutton);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.noRadioButton);
+            this.Controls.Add(this.yesRadioButton);
             this.Controls.Add(this.usertype);
             this.Controls.Add(this.designation);
             this.Controls.Add(this.passwordGet);
@@ -213,8 +216,8 @@
         private System.Windows.Forms.TextBox passwordGet;
         private System.Windows.Forms.TextBox designation;
         private System.Windows.Forms.ComboBox usertype;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton yesRadioButton;
+        private System.Windows.Forms.RadioButton noRadioButton;
         private System.Windows.Forms.Button createuserbutton;
     }
 }
