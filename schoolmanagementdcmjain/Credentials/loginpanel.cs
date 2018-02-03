@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using schoolmanagementdcmjain.Database;
@@ -26,7 +19,6 @@ namespace schoolmanagementdcmjain
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             if (String.IsNullOrEmpty(userName.Text) || String.IsNullOrEmpty(password.Text))
             {
                 MessageBox.Show(Utility.Constants.ConstantStrings.user_pwd_not_empty, Utility.Constants.ConstantStrings.confirmation, MessageBoxButtons.OK);
@@ -41,6 +33,7 @@ namespace schoolmanagementdcmjain
                 {
                     MessageBox.Show(Utility.Constants.ConstantStrings.confirmation, Utility.Constants.ConstantStrings.confirmation, MessageBoxButtons.OK);
                 }
+                
                 mainpanel mp = new mainpanel();
                 mp.Show();
             }
