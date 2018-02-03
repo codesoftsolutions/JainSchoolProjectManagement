@@ -165,6 +165,7 @@
     <Compile Include="Funds\yearlyfunds.Designer.cs">
       <DependentUpon>yearlyfunds.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utility\CommonUtility.cs" />
     <Compile Include="Utility\Constants.cs" />
     <EmbeddedResource Include="Banks\accountdetail.resx">
       <DependentUpon>accountdetail.cs</DependentUpon>
