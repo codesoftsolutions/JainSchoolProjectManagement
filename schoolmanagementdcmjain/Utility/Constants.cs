@@ -19,8 +19,7 @@ namespace schoolmanagementdcmjain.Utility
 
         public class ConstantStrings
         {
-            public static string user_pwd_not_empty = "Username and Password Can't be empty";
-            public static string confirmation = "Confirmation";
+            
         }
 
         public enum UserTypes

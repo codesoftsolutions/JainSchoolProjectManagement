@@ -13,9 +13,9 @@ namespace schoolmanagementdcmjain.Master.Database
     {
         public bool createUser(CreateUserModel createUserModel)
         {
+            Connection connection = new Connection();
             try
             {
-                Connection connection = new Connection();
                 MySqlConnection mySqlConnection = connection.getConnection();
                 string qry = "insert into create_user values('" + createUserModel._id + "','" + createUserModel.userName + "','" +
                     createUserModel.password + "','" + createUserModel.name + "'," + createUserModel.userRollType + ",'" + createUserModel.designation + "',"
@@ -26,6 +26,35 @@ namespace schoolmanagementdcmjain.Master.Database
             catch (Exception)
             {
                 return false;
+            }
+            finally
+            {
+                connection.closeConnection();
+            }
+        }
+
+        public string getIdOfUser()
+        {
+            try
+            {
+                String qry = "select ifnull(max(_id),10000) _id from create_user";
+                Connection connection = new Connection();
+                MySqlConnection mySqlConnection = connection.getConnection();
+                MySqlDataReader mySqlDataReader=connection.selectDataQuery(qry);
+                if(mySqlDataReader.Read())
+                {
+                    int val = Int32.Parse(mySqlDataReader.GetString(0));
+                    val++;
+                    return val.ToString();
+                }
+                else
+                {
+                    return Utility.Constants.emptyString;
+                }
+            }
+            catch(Exception)
+            {
+                return Utility.Constants.emptyString;
             }
         }
     }

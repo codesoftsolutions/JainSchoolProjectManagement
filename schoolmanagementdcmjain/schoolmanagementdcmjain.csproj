@@ -72,6 +72,9 @@
     <Compile Include="Banks\accountdetail.Designer.cs">
       <DependentUpon>accountdetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Credentials\Database\GetLoginDetail.cs" />
+    <Compile Include="Credentials\Models\LoginDetail.cs" />
+    <Compile Include="Credentials\Utility\Constants.cs" />
     <Compile Include="Database\Connection.cs" />
     <Compile Include="Library\addbook.cs">
       <SubType>Form</SubType>
@@ -91,7 +94,7 @@
     <Compile Include="MainPanel\mainpanel.Designer.cs">
       <DependentUpon>mainpanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Master\Constansts\Constants.cs" />
+    <Compile Include="Master\Utility\Constants.cs" />
     <Compile Include="Master\CreateUser.cs">
       <SubType>Form</SubType>
     </Compile>

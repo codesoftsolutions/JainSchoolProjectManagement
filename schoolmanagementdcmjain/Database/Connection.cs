@@ -39,12 +39,11 @@ namespace schoolmanagementdcmjain.Database
             cmd.ExecuteNonQuery();
             return true;
         }
-        public Boolean selectDataQuery(string qry)
+        public MySqlDataReader selectDataQuery(string qry)
         {
             getConnection();
             MySqlCommand cmd = new MySqlCommand(qry, mySqlConnection);
-            cmd.ExecuteReader();
-            return true;
+            return cmd.ExecuteReader();
         }
 
         public Boolean updateData(string qry)
@@ -66,7 +65,7 @@ namespace schoolmanagementdcmjain.Database
         {
             if (mySqlConnection!=null&&mySqlConnection.State == System.Data.ConnectionState.Open)
             {
-                mySqlConnection.Open();
+                mySqlConnection.Close();
             }
         }
 

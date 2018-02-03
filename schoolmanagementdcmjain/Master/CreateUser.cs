@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using schoolmanagementdcmjain.Master.Models;
-using MySql.Data.MySqlClient;
-using schoolmanagementdcmjain.Database;
 using schoolmanagementdcmjain.Utility;
 using schoolmanagementdcmjain.Master.Database;
 
@@ -23,10 +14,20 @@ namespace schoolmanagementdcmjain.Master
             usertype.SelectedIndex = 0;
         }
 
+        private string getId()
+        {
+            return new User().getIdOfUser();
+        }
+
         private void createuserbutton_Click(object sender, EventArgs e)
         {
             CreateUserModel createUser = new CreateUserModel();
-            createUser._id = "";
+            createUser._id = getId();
+            if (createUser._id == Utility.Constants.emptyString)
+            {
+                MessageBox.Show(Utility.Constants.somethingWrong);
+                return;
+            }
             createUser.userName = username.Text;
             createUser.password = passwordGet.Text;
             createUser.name = name.Text;
@@ -61,13 +62,17 @@ namespace schoolmanagementdcmjain.Master
                 createUser.isApproved = (int)Constants.UserTypeApproved.No;
             }
             User user = new User();
-            if(user.createUser(createUser))
+            if (user.createUser(createUser))
             {
-                MessageBox.Show(Constansts.Constants.userCreated);
+                DialogResult result = MessageBox.Show(Utility.Constants.userCreated, Master.Utility.Constants.confirmation, MessageBoxButtons.OK);
+                if (result == DialogResult.OK)
+                {
+                    this.Close();
+                }
             }
             else
             {
-                MessageBox.Show(Constansts.Constants.somethingWrong);
+                MessageBox.Show(Utility.Constants.somethingWrong, Master.Utility.Constants.confirmation, MessageBoxButtons.OK);
             }
         }
     }

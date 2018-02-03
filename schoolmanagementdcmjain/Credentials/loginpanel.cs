@@ -3,6 +3,8 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using schoolmanagementdcmjain.Database;
 using System.Threading;
+using schoolmanagementdcmjain.Credentials.Models;
+using schoolmanagementdcmjain.Credentials.Database;
 
 namespace schoolmanagementdcmjain
 {
@@ -23,24 +25,37 @@ namespace schoolmanagementdcmjain
         {
             if (String.IsNullOrEmpty(userName.Text) || String.IsNullOrEmpty(password.Text))
             {
-                MessageBox.Show(Utility.Constants.ConstantStrings.user_pwd_not_empty, Utility.Constants.ConstantStrings.confirmation, MessageBoxButtons.OK);
+                MessageBox.Show(Credentials.Utility.Constants.user_pwd_not_empty, Credentials.Utility.Constants.confirmation, MessageBoxButtons.OK);
             }
             else
             {
-                string userNameGet = userName.Text;
-                string paswordGet = password.Text;
-                Connection connection = new Connection();
-                MySqlConnection mySqlConnection = connection.getConnection();
-                if (mySqlConnection != null)
+                LoginDetail loginDetail = new LoginDetail();
+                loginDetail.userName = userName.Text;
+                loginDetail.password = password.Text;
+                GetLoginDetail getLoginDetail = new GetLoginDetail();
+                MySqlDataReader mySqlDataReader = getLoginDetail.getLoginDetails(loginDetail);
+                if (mySqlDataReader.Read())
                 {
-                    MessageBox.Show(Utility.Constants.ConstantStrings.confirmation, Utility.Constants.ConstantStrings.confirmation, MessageBoxButtons.OK);
-                    openMainPanelThread = new Thread(openMainPanel);
-                    openMainPanelThread.SetApartmentState(ApartmentState.STA);
-                    openMainPanelThread.Start();
-                    this.Close();     
+                    switch(mySqlDataReader.GetInt32("isApproved"))
+                    {
+                        case (int)Utility.Constants.UserTypeApproved.Yes:
+                            MessageBox.Show(Credentials.Utility.Constants.loginSuccessfully, Credentials.Utility.Constants.confirmation, MessageBoxButtons.OK);
+                            openMainPanelThread = new Thread(openMainPanel);
+                            openMainPanelThread.SetApartmentState(ApartmentState.STA);
+                            openMainPanelThread.Start();
+                            this.Close();
+                            break;
+                        case (int)Utility.Constants.UserTypeApproved.No:
+                            MessageBox.Show(Credentials.Utility.Constants.unAuthorizedAccess, Credentials.Utility.Constants.confirmation, MessageBoxButtons.OK);
+                            break;
+                    }
+                    
                 }
-                
-               
+                else
+                {
+                    MessageBox.Show(Credentials.Utility.Constants.wrongUserNameAndPassword, Credentials.Utility.Constants.confirmation, MessageBoxButtons.OK);
+                }
+
             }
 
 
