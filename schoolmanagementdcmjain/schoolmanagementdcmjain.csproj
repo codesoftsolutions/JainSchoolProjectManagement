@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -70,6 +85,19 @@
     <Compile Include="Library\adddepartment.Designer.cs">
       <DependentUpon>adddepartment.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainPanel\mainpanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPanel\mainpanel.Designer.cs">
+      <DependentUpon>mainpanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFolder\CreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFolder\CreateUser.Designer.cs">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFolder\Models\CreateUserModel.cs" />
     <Compile Include="Shops\addrent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,10 +133,6 @@
     </Compile>
     <Compile Include="Credentials\loginpanel.Designer.cs">
       <DependentUpon>loginpanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MasterFolder\mainpanel.cs" />
-    <Compile Include="MasterFolder\mainpanel.Designer.cs">
-      <DependentUpon>mainpanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Banks\newbank.cs">
       <SubType>Form</SubType>
@@ -146,6 +170,12 @@
     <EmbeddedResource Include="Library\adddepartment.resx">
       <DependentUpon>adddepartment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainPanel\mainpanel.resx">
+      <DependentUpon>mainpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFolder\CreateUser.resx">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Shops\addrent.resx">
       <DependentUpon>addrent.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,9 +193,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Credentials\loginpanel.resx">
       <DependentUpon>loginpanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MasterFolder\mainpanel.resx">
-      <DependentUpon>mainpanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Banks\newbank.resx">
       <DependentUpon>newbank.cs</DependentUpon>
@@ -205,6 +232,18 @@
     <Folder Include="Employee\" />
     <Folder Include="Student\" />
     <Folder Include="Teacher\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

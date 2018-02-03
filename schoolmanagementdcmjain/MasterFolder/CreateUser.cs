@@ -25,7 +25,7 @@ namespace schoolmanagementdcmjain.Master
             CreateUserModel createUser = new CreateUserModel();
             createUser._id = "";
             createUser.userName = username.Text;
-            createUser.password = password.Text;
+            createUser.password = passwordGet.Text;
             createUser.name = name.Text;
             createUser.designation = designation.Text;
             Connection connection = new Connection();

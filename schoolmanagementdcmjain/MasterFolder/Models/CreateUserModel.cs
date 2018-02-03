@@ -10,11 +10,11 @@ namespace schoolmanagementdcmjain.Master.Models
     {
         public string _id { get; set; }
         public string userName { get; set; }
-        private string password { get; set; }
-        private string name { get; set; }
-        private int userRollType { get; set; }
-        private string designation { get; set; }
-        private string isApproved { get; set; }
+        public string password { get; set; }
+        public string name { get; set; }
+        public int userRollType { get; set; }
+        public string designation { get; set; }
+        public string isApproved { get; set; }
 
 
     }

@@ -1075,6 +1075,7 @@
             this.createUserToolStripMenuItem.Name = "createUserToolStripMenuItem";
             this.createUserToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.createUserToolStripMenuItem.Text = "Create User";
+            this.createUserToolStripMenuItem.Click += new System.EventHandler(this.createUserToolStripMenuItem_Click);
             // 
             // mainpanel
             // 

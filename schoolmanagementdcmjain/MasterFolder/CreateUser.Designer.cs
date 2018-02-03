@@ -36,7 +36,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.TextBox();
             this.username = new System.Windows.Forms.TextBox();
-            this.password = new System.Windows.Forms.TextBox();
+            this.passwordGet = new System.Windows.Forms.TextBox();
             this.designation = new System.Windows.Forms.TextBox();
             this.usertype = new System.Windows.Forms.ComboBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -112,12 +112,12 @@
             this.username.Size = new System.Drawing.Size(100, 20);
             this.username.TabIndex = 7;
             // 
-            // password
+            // passwordGet
             // 
-            this.password.Location = new System.Drawing.Point(233, 131);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(100, 20);
-            this.password.TabIndex = 8;
+            this.passwordGet.Location = new System.Drawing.Point(233, 131);
+            this.passwordGet.Name = "passwordGet";
+            this.passwordGet.Size = new System.Drawing.Size(100, 20);
+            this.passwordGet.TabIndex = 8;
             // 
             // designation
             // 
@@ -183,7 +183,7 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.usertype);
             this.Controls.Add(this.designation);
-            this.Controls.Add(this.password);
+            this.Controls.Add(this.passwordGet);
             this.Controls.Add(this.username);
             this.Controls.Add(this.name);
             this.Controls.Add(this.label6);
@@ -210,7 +210,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.TextBox username;
-        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.TextBox passwordGet;
         private System.Windows.Forms.TextBox designation;
         private System.Windows.Forms.ComboBox usertype;
         private System.Windows.Forms.RadioButton radioButton1;
