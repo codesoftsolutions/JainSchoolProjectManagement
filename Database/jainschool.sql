@@ -44,6 +44,34 @@ LOCK TABLES `create_user` WRITE;
 INSERT INTO `create_user` VALUES ('10001','sdfsdf','sdfsdf','sdfsdf',0,'sdfsdf',1),('10002','wrtrwt','wrtwrtrwt','wrtrwt',0,'wrtwrtrwt',1),('10003','dfsdf','dfsdf','sdfsdf',0,'dfsdf',1),('10004','gfdg','fgfgfgf','sfsdf',0,'gfsgsfgsfg',1),('10005','aa','aa','aa',0,'aa',0);
 /*!40000 ALTER TABLE `create_user` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'jainschool'
+--
+/*!50003 DROP PROCEDURE IF EXISTS `master_user_login` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = latin1 */ ;
+/*!50003 SET character_set_results = latin1 */ ;
+/*!50003 SET collation_connection  = latin1_swedish_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `master_user_login`(
+  IN usernameGet VARCHAR(20),
+  IN passwordGet VARCHAR(20)
+)
+BEGIN
+  select * from create_user where user_name=usernameGet
+AND password=passwordGet
+;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -54,4 +82,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-02-03 20:42:23
+-- Dump completed on 2018-02-04  9:10:36
