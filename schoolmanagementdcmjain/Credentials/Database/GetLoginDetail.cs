@@ -12,10 +12,20 @@ namespace schoolmanagementdcmjain.Credentials.Database
 {
     class GetLoginDetail
     {
-        public MySqlDataReader getLoginDetailsWithStoredProcedure(LoginDetail loginDetail, string procedureName)
+        //we can use either query inside our code
+        public MySqlDataReader getLoginDetails(LoginDetail loginDetail)
         {
             Connection connection = new Connection();
-            using (MySqlCommand cmd = new MySqlCommand(procedureName, connection.getConnection()))
+            connection.getConnection();
+            string qry = "select * from create_user where user_name='" + loginDetail.userName + "'" +
+                " and password='" + loginDetail.password + "'";
+            return connection.selectDataQuery(qry);
+        }
+
+        //we can use storedprocedure so that query is made on server side and focus on our business logic
+        public MySqlDataReader getLoginDetailsWithStoredProcedure(LoginDetail loginDetail, string procedureName)
+        {
+            using (MySqlCommand cmd = new MySqlCommand(procedureName, new Connection().getConnection()))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@usernameGet", loginDetail.userName);
