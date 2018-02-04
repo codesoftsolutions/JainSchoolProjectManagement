@@ -16,4 +16,9 @@ namespace schoolmanagementdcmjain.Credentials.Utility
         public static string somethingWrong = "Something went wrong please try again later";
         public static string wrongUserNameAndPassword = "You have entered wrong username and password";
     }
+
+    class StoredProcedure
+    {
+        public static string master_create_user = "master_user_login";
+    }
 }

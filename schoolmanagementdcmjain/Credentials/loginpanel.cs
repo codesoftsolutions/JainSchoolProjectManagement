@@ -33,7 +33,8 @@ namespace schoolmanagementdcmjain
                 loginDetail.userName = userName.Text;
                 loginDetail.password = password.Text;
                 GetLoginDetail getLoginDetail = new GetLoginDetail();
-                MySqlDataReader mySqlDataReader = getLoginDetail.getLoginDetails(loginDetail);
+                MySqlDataReader mySqlDataReader;
+                mySqlDataReader = getLoginDetail.getLoginDetailsWithStoredProcedure(loginDetail, Credentials.Utility.StoredProcedure.master_create_user);
                 if (mySqlDataReader.Read())
                 {
                     switch(mySqlDataReader.GetInt32("isApproved"))
