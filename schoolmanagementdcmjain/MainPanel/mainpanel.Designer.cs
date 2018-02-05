@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainpanel));
             this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
@@ -155,6 +156,7 @@
             this.updateUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -244,14 +246,15 @@
             // printFormToolStripMenuItem
             // 
             this.printFormToolStripMenuItem.Name = "printFormToolStripMenuItem";
-            this.printFormToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
+            this.printFormToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.printFormToolStripMenuItem.Text = "Print form";
             // 
             // applyForTestToolStripMenuItem
             // 
             this.applyForTestToolStripMenuItem.Name = "applyForTestToolStripMenuItem";
-            this.applyForTestToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
-            this.applyForTestToolStripMenuItem.Text = "Apply For Test";
+            this.applyForTestToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
+            this.applyForTestToolStripMenuItem.Text = "Register Student";
+            this.applyForTestToolStripMenuItem.Click += new System.EventHandler(this.applyForTestToolStripMenuItem_Click);
             // 
             // newAdmissionToolStripMenuItem
             // 
@@ -1078,20 +1081,20 @@
             // createUserToolStripMenuItem
             // 
             this.createUserToolStripMenuItem.Name = "createUserToolStripMenuItem";
-            this.createUserToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.createUserToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.createUserToolStripMenuItem.Text = "Create User";
             this.createUserToolStripMenuItem.Click += new System.EventHandler(this.createUserToolStripMenuItem_Click);
             // 
             // updateUserToolStripMenuItem
             // 
             this.updateUserToolStripMenuItem.Name = "updateUserToolStripMenuItem";
-            this.updateUserToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.updateUserToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.updateUserToolStripMenuItem.Text = "Update User";
             // 
             // deleteUserToolStripMenuItem
             // 
             this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
-            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.deleteUserToolStripMenuItem.Text = "Delete User";
             // 
             // accountToolStripMenuItem
@@ -1250,5 +1253,6 @@
         private System.Windows.Forms.ToolStripMenuItem updateUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
+        private System.Windows.Forms.Timer timer1;
     }
 }

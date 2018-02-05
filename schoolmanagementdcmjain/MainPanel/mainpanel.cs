@@ -1,12 +1,6 @@
 ﻿using schoolmanagementdcmjain.Master;
+using schoolmanagementdcmjain.Student;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace schoolmanagementdcmjain
@@ -182,6 +176,12 @@ namespace schoolmanagementdcmjain
         {
             CreateUser createUser = new CreateUser();
             createUser.Show();
+        }
+
+        private void applyForTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegisterStudent rs = new RegisterStudent();
+            rs.Show();
         }
     }
 }
