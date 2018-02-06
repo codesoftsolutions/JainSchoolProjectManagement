@@ -37,7 +37,7 @@ namespace schoolmanagementdcmjain
                 mySqlDataReader = getLoginDetail.getLoginDetailsWithStoredProcedure(loginDetail, Credentials.Utility.StoredProcedure.master_create_user);
                 if (mySqlDataReader.Read())
                 {
-                    switch(mySqlDataReader.GetInt32("isApproved"))
+                    switch(mySqlDataReader.GetInt32(Constant.isApproved))
                     {
                         case (int)Utility.Constants.UserTypeApproved.Yes:
                             MessageBox.Show(Credentials.Utility.Constants.loginSuccessfully, Credentials.Utility.Constants.confirmation, MessageBoxButtons.OK);

@@ -34,4 +34,9 @@ namespace schoolmanagementdcmjain.Credentials.Database
             };
         }
     }
+
+    class Constant
+    {
+        public static string isApproved = "isApproved";
+    }
 }
