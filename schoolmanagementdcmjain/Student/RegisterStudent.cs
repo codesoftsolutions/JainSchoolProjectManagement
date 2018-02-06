@@ -16,57 +16,7 @@ namespace schoolmanagementdcmjain.Student
         {
             InitializeComponent();
         }
-
-        private void studentname_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkIsStringOrNot(e);
-        }
-
-        private void phno_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkIsDigitOrNot(e);
-        }
-
-        private void mbno_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkIsDigitOrNot(e);
-        }
-
-        private void state_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkIsStringOrNot(e);
-        }
-
-        private void city_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkIsStringOrNot(e);
-        }
-
-        private void area_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkIsStringOrNot(e);
-        }
-
-        private void redgfee_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkIsDigitOrNot(e);
-        }
-
-        private void age_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkIsDigitOrNot(e);
-        }
-
-        private void fathername_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkIsStringOrNot(e);
-        }
-
-        private void mothername_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkIsStringOrNot(e);
-        }
-
+       
         private void checkIsStringOrNot(KeyPressEventArgs e)
         {
             if (!Char.IsControl(e.KeyChar) && !Char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
@@ -91,6 +41,55 @@ namespace schoolmanagementdcmjain.Student
         private void cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void keyPress(object sender, KeyPressEventArgs e)
+        {
+            var textBox = (TextBox)sender;
+            if (textBox.Name.Equals(mb_no.Name))
+            {
+                checkIsDigitOrNot(e);
+            }
+            else if (textBox.Name.Equals(phone_no.Name))
+            {
+                checkIsDigitOrNot(e);
+            }
+            else if (textBox.Name.Equals(state.Name))
+            {
+                checkIsStringOrNot(e);
+            }
+            else if (textBox.Name.Equals(city.Name))
+            {
+                checkIsStringOrNot(e);
+            }
+            else if (textBox.Name.Equals(area.Name))
+            {
+                checkIsStringOrNot(e);
+            }
+            else if (textBox.Name.Equals(studentName.Name))
+            {
+                checkIsStringOrNot(e);
+            }
+            else if (textBox.Name.Equals(fatherName.Name))
+            {
+                checkIsStringOrNot(e);
+            }
+            else if (textBox.Name.Equals(motherName.Name))
+            {
+                checkIsStringOrNot(e);
+            }
+            else if (textBox.Name.Equals(state.Name))
+            {
+                checkIsStringOrNot(e);
+            }
+            else if (textBox.Name.Equals(state.Name))
+            {
+                checkIsStringOrNot(e);
+            }
+            else if (textBox.Name.Equals(age.Name))
+            {
+                checkIsDigitOrNot(e);
+            }
         }
     }
 }

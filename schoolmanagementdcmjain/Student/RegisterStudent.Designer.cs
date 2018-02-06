@@ -41,7 +41,7 @@
             this.motherName = new System.Windows.Forms.TextBox();
             this.age = new System.Windows.Forms.TextBox();
             this.phone_no = new System.Windows.Forms.TextBox();
-            this.mobile_no = new System.Windows.Forms.TextBox();
+            this.mb_no = new System.Windows.Forms.TextBox();
             this.mb_no_label = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.new_regd_no_Button = new System.Windows.Forms.Button();
@@ -158,7 +158,7 @@
             this.studentName.Name = "studentName";
             this.studentName.Size = new System.Drawing.Size(179, 20);
             this.studentName.TabIndex = 2;
-            this.studentName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.studentname_KeyPress);
+            this.studentName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // fatherName
             // 
@@ -167,7 +167,7 @@
             this.fatherName.Name = "fatherName";
             this.fatherName.Size = new System.Drawing.Size(179, 20);
             this.fatherName.TabIndex = 3;
-            this.fatherName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fathername_KeyPress);
+            this.fatherName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // motherName
             // 
@@ -176,7 +176,7 @@
             this.motherName.Name = "motherName";
             this.motherName.Size = new System.Drawing.Size(179, 20);
             this.motherName.TabIndex = 4;
-            this.motherName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mothername_KeyPress);
+            this.motherName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // age
             // 
@@ -185,7 +185,7 @@
             this.age.Name = "age";
             this.age.Size = new System.Drawing.Size(179, 20);
             this.age.TabIndex = 6;
-            this.age.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.age_KeyPress);
+            this.age.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // phone_no
             // 
@@ -194,16 +194,16 @@
             this.phone_no.Name = "phone_no";
             this.phone_no.Size = new System.Drawing.Size(179, 20);
             this.phone_no.TabIndex = 7;
-            this.phone_no.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phno_KeyPress);
+            this.phone_no.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
-            // mobile_no
+            // mb_no
             // 
-            this.mobile_no.Location = new System.Drawing.Point(104, 381);
-            this.mobile_no.Margin = new System.Windows.Forms.Padding(2);
-            this.mobile_no.Name = "mobile_no";
-            this.mobile_no.Size = new System.Drawing.Size(179, 20);
-            this.mobile_no.TabIndex = 8;
-            this.mobile_no.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mbno_KeyPress);
+            this.mb_no.Location = new System.Drawing.Point(104, 381);
+            this.mb_no.Margin = new System.Windows.Forms.Padding(2);
+            this.mb_no.Name = "mb_no";
+            this.mb_no.Size = new System.Drawing.Size(179, 20);
+            this.mb_no.TabIndex = 8;
+            this.mb_no.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // mb_no_label
             // 
@@ -242,7 +242,7 @@
             this.city.Name = "city";
             this.city.Size = new System.Drawing.Size(179, 20);
             this.city.TabIndex = 12;
-            this.city.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.city_KeyPress);
+            this.city.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // state
             // 
@@ -251,7 +251,7 @@
             this.state.Name = "state";
             this.state.Size = new System.Drawing.Size(179, 20);
             this.state.TabIndex = 11;
-            this.state.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.state_KeyPress);
+            this.state.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // area
             // 
@@ -260,7 +260,7 @@
             this.area.Name = "area";
             this.area.Size = new System.Drawing.Size(179, 20);
             this.area.TabIndex = 13;
-            this.area.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.area_KeyPress);
+            this.area.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // city_label
             // 
@@ -318,7 +318,7 @@
             this.regd_fee.Name = "regd_fee";
             this.regd_fee.Size = new System.Drawing.Size(179, 20);
             this.regd_fee.TabIndex = 14;
-            this.regd_fee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.redgfee_KeyPress);
+            this.regd_fee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress);
             // 
             // currentDateTimePicker
             // 
@@ -445,7 +445,6 @@
             this.female_radioButton.Name = "female_radioButton";
             this.female_radioButton.Size = new System.Drawing.Size(59, 17);
             this.female_radioButton.TabIndex = 29;
-            this.female_radioButton.TabStop = true;
             this.female_radioButton.Text = "Female";
             this.female_radioButton.UseVisualStyleBackColor = true;
             // 
@@ -479,7 +478,7 @@
             this.Controls.Add(this.new_regd_no_Button);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.mb_no_label);
-            this.Controls.Add(this.mobile_no);
+            this.Controls.Add(this.mb_no);
             this.Controls.Add(this.phone_no);
             this.Controls.Add(this.age);
             this.Controls.Add(this.motherName);
@@ -521,7 +520,7 @@
         private System.Windows.Forms.TextBox motherName;
         private System.Windows.Forms.TextBox age;
         private System.Windows.Forms.TextBox phone_no;
-        private System.Windows.Forms.TextBox mobile_no;
+        private System.Windows.Forms.TextBox mb_no;
         private System.Windows.Forms.Label mb_no_label;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Button new_regd_no_Button;
