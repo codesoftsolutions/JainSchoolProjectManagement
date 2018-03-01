@@ -455,7 +455,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(1071, 513);
+            this.ClientSize = new System.Drawing.Size(1071, 511);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.female_radioButton);
             this.Controls.Add(this.male_radioButton);

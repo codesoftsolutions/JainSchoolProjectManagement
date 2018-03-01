@@ -26,7 +26,6 @@ namespace schoolmanagementdcmjain.Utility
                 e.Handled = true;
             }
         }
-
         public void checkIsDigitOrNot(KeyPressEventArgs e)
         {
             if (!Char.IsControl(e.KeyChar) && !Char.IsDigit(e.KeyChar))
