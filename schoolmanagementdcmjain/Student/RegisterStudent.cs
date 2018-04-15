@@ -18,6 +18,9 @@ namespace schoolmanagementdcmjain.Student
 
         private void Cancel_Click(object sender, EventArgs e) => Close();
 
-       
+        private void save_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49123015-0CDA-4185-9301-D7947EFC5DD5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>schoolmanagementdcmjain</RootNamespace>
+    <AssemblyName>schoolmanagementdcmjain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DarrenLee.Translator">
+      <HintPath>..\DarrenLee.Translator.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.2.1.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharp.106.2.1\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SqlXml" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Banks\accountdetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banks\accountdetail.Designer.cs">
+      <DependentUpon>accountdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\languageservices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\translator\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Credentials\Database\GetLoginDetail.cs" />
+    <Compile Include="Credentials\Models\LoginDetail.cs" />
+    <Compile Include="Credentials\Utility\Constants.cs" />
+    <Compile Include="Database\Connection.cs" />
+    <Compile Include="Library\addbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Library\addbook.Designer.cs">
+      <DependentUpon>addbook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library\adddepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Library\adddepartment.Designer.cs">
+      <DependentUpon>adddepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPanel\mainpanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPanel\mainpanel.Designer.cs">
+      <DependentUpon>mainpanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Utility\Constants.cs" />
+    <Compile Include="Master\CreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\CreateUser.Designer.cs">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Database\User.cs" />
+    <Compile Include="Master\Models\CreateUserModel.cs" />
+    <Compile Include="Shops\addrent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shops\addrent.Designer.cs">
+      <DependentUpon>addrent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shops\addshop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shops\addshop.Designer.cs">
+      <DependentUpon>addshop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library\issuebook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Library\issuebook.Designer.cs">
+      <DependentUpon>issuebook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library\libraryfulldetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Library\libraryfulldetail.Designer.cs">
+      <DependentUpon>libraryfulldetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funds\monthlyfunds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funds\monthlyfunds.Designer.cs">
+      <DependentUpon>monthlyfunds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Credentials\loginpanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Credentials\loginpanel.Designer.cs">
+      <DependentUpon>loginpanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Banks\newbank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banks\newbank.Designer.cs">
+      <DependentUpon>newbank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Banks\newbankaccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Banks\newbankaccount.Designer.cs">
+      <DependentUpon>newbankaccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shops\shopdetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shops\shopdetail.Designer.cs">
+      <DependentUpon>shopdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funds\yearlyfunds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funds\yearlyfunds.Designer.cs">
+      <DependentUpon>yearlyfunds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\RegisterStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\RegisterStudent.Designer.cs">
+      <DependentUpon>RegisterStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\StudentRegistration.Designer.cs">
+      <DependentUpon>StudentRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\CommonUtility.cs" />
+    <Compile Include="Utility\Constants.cs" />
+    <EmbeddedResource Include="Banks\accountdetail.resx">
+      <DependentUpon>accountdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library\addbook.resx">
+      <DependentUpon>addbook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library\adddepartment.resx">
+      <DependentUpon>adddepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPanel\mainpanel.resx">
+      <DependentUpon>mainpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\CreateUser.resx">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shops\addrent.resx">
+      <DependentUpon>addrent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shops\addshop.resx">
+      <DependentUpon>addshop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library\issuebook.resx">
+      <DependentUpon>issuebook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library\libraryfulldetail.resx">
+      <DependentUpon>libraryfulldetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Funds\monthlyfunds.resx">
+      <DependentUpon>monthlyfunds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Credentials\loginpanel.resx">
+      <DependentUpon>loginpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banks\newbank.resx">
+      <DependentUpon>newbank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Banks\newbankaccount.resx">
+      <DependentUpon>newbankaccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Shops\shopdetail.resx">
+      <DependentUpon>shopdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Funds\yearlyfunds.resx">
+      <DependentUpon>yearlyfunds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\RegisterStudent.resx">
+      <DependentUpon>RegisterStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\StudentRegistration.resx">
+      <DependentUpon>StudentRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\languageservices\soap.wsdl" />
+    <None Include="Connected Services\languageservices\soap.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\languageservices\soap1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\languageservices\soap2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\languageservices\SoapService.wsdl" />
+    <None Include="Connected Services\languageservices\SoapService1.wsdl" />
+    <None Include="Connected Services\translator\soap.wsdl" />
+    <None Include="Connected Services\translator\soap.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\translator\soap1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\translator\soap2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\translator\SoapService.wsdl" />
+    <None Include="Connected Services\translator\SoapService1.wsdl" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Employee\" />
+    <Folder Include="Teacher\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\languageservices\" />
+    <WCFMetadataStorage Include="Connected Services\translator\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\translator\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\translator\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\translator\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\languageservices\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\languageservices\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\languageservices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
